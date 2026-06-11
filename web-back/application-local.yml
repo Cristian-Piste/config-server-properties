@@ -1,0 +1,69 @@
+url:
+  apisec:
+    migration: https://digitalbank-k8s-dev.bancobase.net/security/v1/user/ismigrated
+  baseLake:
+    bow:
+      trace: https://digitalbank-k8s-dev.bancobase.net/ms-transactions/v1/trace-data
+  basems:
+    apiAccounts:
+      service: https://digitalbank-k8s-dev.bancobase.net/accounts/v2/byclientid
+    apiRecipients:
+      service: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/?numberOfElements=100&page=0
+  catalogs:
+    paymentSchedules: https://digitalbank-k8s-dev.bancobase.net/catalogs/v2/paymentSchedules
+  client:
+    rfc: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/bank/customer/clabe
+  close:
+    session: https://digitalbank-k8s-dev.bancobase.net/security/v1/auth/login
+  consult:
+    spread: https://digitalbank-k8s-dev.bancobase.net/exchanges/v3/spread
+  fx:
+    trade:
+      execution: https://digitalbank-k8s-dev.bancobase.net/exchanges/v3/fx-trade/execution
+  massive:
+    recipients:
+      byIds: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/search/by-ids
+      get: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/
+  notification:
+    email: https://digitalbank-k8s-dev.bancobase.net/notification/email
+    otp: https://digitalbank-k8s-dev.bancobase.net/security/v1/auth/generate/code/otp/
+  onbase:
+    contract:
+      annex: https://digitalbank-k8s-dev.bancobase.net/contracts-base/contract/annex
+  recipients:
+    company:
+      foreign: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/company/foreign
+      national: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/company/national
+    findById: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/
+    physical:
+      international: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/physical/foreign
+      national: https://digitalbank-k8s-dev.bancobase.net/recipients/v2/physical/national
+  transfer:
+    payment:
+      batch:
+        authorize: https://digitalbank-k8s-dev.bancobase.net/dispersions/v1/payment/batch/authorize
+        getDetail: https://digitalbank-k8s-dev.bancobase.net/dispersions/v1/batch/
+      individual: http://localhost:3000/transfers/v1/transfers/individual
+      opi: https://digitalbank-k8s-dev.bancobase.net/transfers/v1/foreign
+      owns: https://digitalbank-k8s-dev.bancobase.net/transfers/v1/transfers/owns
+      spei: https://digitalbank-k8s-dev.bancobase.net/transfers/v1/transfers/spei
+      spid: https://digitalbank-k8s-dev.bancobase.net/transfers/v1/transfers/spid
+      thirds: https://digitalbank-k8s-dev.bancobase.net/transfers/v1/transfers/thirds
+  transfers:
+    payment: https://digitalbank-k8s-dev.bancobase.net/transfers/v1/payments/individual
+  update:
+    tokens: https://digitalbank-k8s-dev.bancobase.net/security/v1/tokens
+  user:
+    status: https://digitalbank-k8s-dev.bancobase.net/security/v1/user/status
+  validate:
+    jwt:
+      token: https://digitalbank-k8s-dev.bancobase.net/security/v1/auth/validate/tokenJWT
+    token: https://digitalbank-k8s-dev.bancobase.net/security/v1/auth/validate/token
+  websocket: ${URL_WEBSOCKET:ws://localhost:8888/bancobase/api/websocket/notification}
+logging:
+  level:
+    controller: DEBUG
+    resttemplate: DEBUG
+test:
+  valorString: este_es_un_valor_de_prueba
+  valorBoolean: true
