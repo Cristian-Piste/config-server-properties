@@ -65,5 +65,5 @@ logging:
     controller: DEBUG
     resttemplate: DEBUG
 test:
-  valorString: este_es_un_valor_de_prueba
-  valorBoolean: true
+  valorString: CAMBIANDO EL VALOR DE LA VARIABLE STRING POR PRIMERA VEZ
+  valorBoolean: false
